@@ -1,1 +1,1 @@
-# Vector-Space-Retrieval-VSM-Model
+# Vector-Space-Retrieval(VSM)-Model
