@@ -1,10 +1,5 @@
 # Vector-Space-Retrieval(VSM)-Model
-All the three codes(invidx_cons.py, printdict.py and vecsearch.py) make use of the following basic python libraries/packages - 
-1.) os
-2.) string
-3.) math
-4.) pickle
-5.) xml.etree.ElementTree
+All the three codes(invidx_cons.py, printdict.py and vecsearch.py) make use of the following basic python libraries/packages - os, string, math, pickle and xml.etree.ElementTree
 
 The programs are to be executed in the following order - invidx_cons.py --> printdict.py --> vecsearch.py
 
