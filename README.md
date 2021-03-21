@@ -1,10 +1,10 @@
 # Vector-Space-Retrieval(VSM)-Model
 This Vector Space Retrieval Model has been implemented for evaluation of the algorithm over small-sized benchmark document collection from TREC, which has been preprocessed by NLTK/StanfordNLP. The small scale dataset also contains a portion of the TREC topics (i.e., queries) and their judgements (i.e., qrels) on these documents.   
 
-All the three codes(invidx_cons.py, printdict.py and vecsearch.py) make use of the following basic python libraries/packages - os, string, math, pickle and xml.etree.ElementTree
+All the three codes(invidx_cons.py, printdict.py and vecsearch.py) make use of the following basic python libraries/packages - os, string, math, pickle and xml.etree.ElementTree.
 
 # Usage
-The programs are to be executed in the following order - invidx_cons.py --> vecsearch.py. The prindict.py file prints the inverted index dictionary in a human readable format 
+The programs are to be executed in the following order - invidx_cons.py --> vecsearch.py. The prindict.py file prints the inverted index dictionary in a human readable format. 
 - invidx.py => python invidx.py => provide 1st input as path to document collection folder (eg:- data/TaggedTrainingAP/) => provide 2nd input as the name of the index file
 - vecsearch.py => python vecsearch.py => provide 1st input as the query file (eg:- data/topics.51-100) => provide 2nd input as the cut off k value => provide 3rd input as name of the result file => provide 4th input as the index file obtained from invidx.py => provide 5th input as the dict file obtained from invidx.py
 - printdict.py => python printdict.py => provide 1st input as the dict file obtained from invidx.py
