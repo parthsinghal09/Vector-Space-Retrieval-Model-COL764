@@ -37,3 +37,11 @@ The programs are to be executed in the following order - invidx_cons.py --> vecs
 
 # Report.pdf 
 - algorithmic details documentation
+
+# Results 
+- The wall running clock time of the invidx_cons.py program is 162.67
+- The indexfile.dict contains 467793 unique words as keys and indexfile.idx contains 81946 unique document IDs as keys
+- The size of the indexfile.dict is 108MB and the size of indexfile.idx in 321MB
+The ndcg and F1 scores were evaluated using trec_eval 
+- The ndcg value obtained for k = 10 is 0.2322
+- The F1 score obtained for k = 100 is 0.1527
