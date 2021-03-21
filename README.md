@@ -1,9 +1,15 @@
 # Vector-Space-Retrieval(VSM)-Model
+This Vector Space Retrieval Model has been implemented for evaluation of the algorithm over small-sized benchmark document collection from TREC, which has been preprocessed by NLTK/StanfordNLP. The small scale dataset also contains a portion of the TREC topics (i.e., queries) and their judgements (i.e., qrels) on these documents.   
+
 All the three codes(invidx_cons.py, printdict.py and vecsearch.py) make use of the following basic python libraries/packages - os, string, math, pickle and xml.etree.ElementTree
 
-The programs are to be executed in the following order - invidx_cons.py --> printdict.py --> vecsearch.py
+# Usage
+The programs are to be executed in the following order - invidx_cons.py --> vecsearch.py. The prindict.py file prints the inverted index dictionary in a human readable format 
+- invidx.py => python invidx.py => provide 1st input as path to document collection folder (eg:- data/TaggedTrainingAP/) => provide 2nd input as the name of the index file
+- vecsearch.py => python vecsearch.py => provide 1st input as the query file (eg:- data/topics.51-100) => provide 2nd input as the cut off k value => provide 3rd input as name of the result file => provide 4th input as the index file obtained from invidx.py => provide 5th input as the dict file obtained from invidx.py
+- printdict.py => python printdict.py => provide 1st input as the dict file obtained from invidx.py
 
-invidx.py 
+# invidx.py 
 - python program with the help of which inverted index files are generated
 - it outputs two binary files 
   1.) indexfile.dict - contains a dictionary with keys as uniques words present in all the documents and values as list containing the document IDs of the documents in which the key is present
@@ -13,13 +19,13 @@ invidx.py
 - after successfully giving the path to the folder containing the collection files a new dialogue will be seen, "Enter indexfile: ", upon which the user as to input the path/name of the indexfile that has to be saved
 
 
-printdict.py 
+# printdict.py 
 - prints the indexfile.dict file generated using invidx_cons.py in a human-readable sorted form to the screen
 - parameter to this function is the binary file, indexfile.dict, generated using the invidx_cons.py program
 - upon executing this program, the user will see a dialogue on the console, "Enter dictfile: ", upon which the user will have to input the path to the file indefile.dict generated using invidx_cons.py
 - format on the screen(each line) -- "<indexterm>:<df>:<offset-to-its-postingslist-in-idx-file>"
 
-vecsearch.py 
+# vecsearch.py 
 - this is the implementation of vector space retrieval model and makes use of the files indexfile.idx and indexfile.dict
 - upon executing this program, the user will have to provide 5 inputs: 
   1.) queryfile - input the path to the queryfile, dialogue that will appear for this is "Enter queryfile: "
@@ -29,5 +35,5 @@ vecsearch.py
   5.) indexfile.dict - input the path to the indexfile.dict generated using invidx_cons.py, dialogue that will appear for this is "Enter dictfile: "
 - outputs a resultfile in the format(each line) -- "qid iter docno rank sim run id"
 
-Report.pdf 
+# Report.pdf 
 - algorithmic details documentation
